@@ -4,6 +4,30 @@ import PageBanner from '@/components/PageBanner';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Termite Control - Miracle Pest Control',
+  description:
+    "Protect your home with Miracle Pest Control's professional termite control services. Our expert team in Johannesburg provides comprehensive termite inspections, treatments, and monitoring to ensure your property remains termite-free. Contact us today to safeguard your home from termite damage.",
+  keywords: [
+    'termite control',
+    'Miracle Pest Control',
+    'Johannesburg termite control',
+    'termite treatment',
+    'termite inspection',
+    'termite prevention',
+    'termite damage repair',
+    'professional termite services',
+    'residential termite control',
+    'commercial termite control',
+    'termite monitoring',
+    'pest control Johannesburg',
+    'eco-friendly termite control',
+    'termite extermination',
+    'protect home from termites',
+  ],
+};
+
+
 const page = () => {
   return (
     <>
