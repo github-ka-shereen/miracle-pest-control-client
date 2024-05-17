@@ -4,6 +4,32 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Fumigation Services - Miracle Pest Control',
+  description:
+    'Miracle Pest Control offers professional fumigation services in Johannesburg to eradicate unwanted pests in residential, commercial, and industrial spaces. Our experienced team uses effective, odorless fumigants to ensure complete pest removal without leaving hazardous residues. Contact us today for reliable fumigation solutions tailored to your specific needs.',
+  keywords: [
+    'fumigation services',
+    'Miracle Pest Control',
+    'Johannesburg fumigation',
+    'pest control',
+    'residential fumigation',
+    'commercial fumigation',
+    'industrial fumigation',
+    'effective fumigation',
+    'safe fumigation',
+    'fumigant gas',
+    'pest extermination',
+    'insect fumigation',
+    'rodent fumigation',
+    'shipping container fumigation',
+    'building fumigation',
+    'pest removal',
+    'proactive pest control',
+  ],
+};
+
+
 const page = () => {
   return (
     <>

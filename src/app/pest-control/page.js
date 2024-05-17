@@ -4,6 +4,33 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Pest Control - Miracle Pest Control',
+  description:
+    'Welcome to Miracle Pest Control, your premier solution for pest management in Johannesburg. We specialize in the extermination, removal, and control of a wide range of pests, ensuring a pest-free environment for both residential and commercial properties. Our experienced team uses safe and effective methods to protect your home or business from pests like cockroaches, mosquitoes, rats, termites, and more. Contact us today for reliable pest control services.',
+  keywords: [
+    'pest control',
+    'Miracle Pest Control',
+    'Johannesburg pest control',
+    'residential pest control',
+    'commercial pest control',
+    'eco-friendly pest control',
+    'extermination services',
+    'pest removal',
+    'cockroach control',
+    'mosquito control',
+    'rat control',
+    'termite control',
+    'flea control',
+    'bee relocation',
+    'fumigation services',
+    'safe pest control',
+    'effective pest management',
+    'home pest protection',
+    'business pest control',
+  ],
+};
+
 const page = () => {
   return (
     <>

@@ -15,6 +15,28 @@ import {
   BiWrench,
 } from 'react-icons/bi';
 
+export const metadata = {
+  title: 'Termite Control - Miracle Pest Control',
+  description:
+    'Ensure your home stays safe from termites with Miracle Pest Control. Our Johannesburg-based team provides professional termite control and treatment services to protect your wooden structures from extensive damage. Trust our experienced specialists for comprehensive termite inspections, treatments, and ongoing monitoring. Contact us now for effective termite protection solutions.',
+  keywords: [
+    'termite control',
+    'termite treatment',
+    'termite inspection',
+    'termite monitoring',
+    'Miracle Pest Control',
+    'Johannesburg termite control',
+    'pest control',
+    'wood damage prevention',
+    'residential termite control',
+    'commercial termite control',
+    'eco-friendly termite control',
+    'termite infestation',
+    'home termite protection',
+    'preventative termite measures',
+  ],
+};
+
 const Home = () => {
   // sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
   // const loading = false;

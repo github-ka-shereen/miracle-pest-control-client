@@ -19,12 +19,26 @@ import {
 } from '@/components/ui/select';
 
 export const metadata = {
-  title: 'Contact Us - Get In Touch Today',
+  title: 'Contact Us - Miracle Pest Control',
   description:
-    'Get in touch for a consultation with qualified lawyer, we are ready to assist.',
-  keywords:
-    'Bulawayo Lawyer, Bulawayo Lawyers, Legal Consultation, Legal Services Bulawayo, Calderwood Contact Information, Bulawayo Law Firm',
+    'Get in touch with Miracle Pest Control in Johannesburg for all your pest management needs. Our expert team is ready to assist you with professional pest control services, including termite control, fumigation, and more. Contact us today to schedule an appointment or to get a free quote.',
+  keywords: [
+    'contact Miracle Pest Control',
+    'pest control contact',
+    'Johannesburg pest control',
+    'pest management services',
+    'termite control contact',
+    'fumigation contact',
+    'schedule pest control',
+    'pest control quote',
+    'pest control appointment',
+    'professional pest control',
+    'residential pest control',
+    'commercial pest control',
+    'eco-friendly pest control',
+  ],
 };
+
 
 const Contact = () => {
   return (

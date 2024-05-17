@@ -1,6 +1,24 @@
 import PageBanner from '@/components/PageBanner';
 import Image from 'next/image';
 
+export const metadata = {
+  title: 'About Us - Miracle Pest Control',
+  description:
+    'Learn about Miracle Pest Control, a leading pest management company based in Johannesburg. Our dedicated team provides professional pest control services, including termite control, fumigation, and more, ensuring your home and business remain pest-free. Discover our commitment to excellence and customer satisfaction.',
+  keywords: [
+    'Miracle Pest Control company',
+
+    'pest management experts Johannesburg',
+    'professional pest control services',
+    'termite control specialists',
+    'fumigation services Johannesburg',
+    'pest-free homes Johannesburg',
+    'commercial pest solutions',
+    'residential pest control',
+    'Johannesburg pest management',
+  ],
+};
+
 const page = () => {
   return (
     <>

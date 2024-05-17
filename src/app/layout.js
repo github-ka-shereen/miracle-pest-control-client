@@ -1,41 +1,40 @@
-// import { Roboto } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layouts/header/Header';
 import Footer from '@/components/layouts/footer/Footer';
+import { cn } from '@/lib/utils';
 
-// const roboto = Roboto({
-//   weight: ['100', '300', '400', '500', '700'],
-//   subsets: ['latin'],
-//   display: 'swap',
-// });
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '800', '800', '700'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
-  title: 'Lawn Miracle',
+  title: 'Miracle Pest Control',
   description:
-    'Miracle Lawn is a Johannesburg-based landscaping company dedicated to crafting beautiful outdoor landscapes and gardens. From landscaping and garden cleanup to irrigation and pest control, we provide top-notch services tailored to meet your unique needs. Contact us today to transform your yard into an oasis of natural beauty.',
+    'Miracle Pest Control is a leading pest management company based in Johannesburg. We specialize in comprehensive pest control solutions for both residential and commercial properties, ensuring your space is safe and pest-free. Our expert team is dedicated to providing efficient, eco-friendly services to meet all your pest control needs. Contact us today for a pest-free tomorrow.',
   keywords: [
-    'lawn miracle',
-    'landscaping',
-    'gardening',
-    'Johannesburg',
-    'outdoor spaces',
-    'yard transformation',
-    'landscape design',
-    'garden cleanup',
-    'irrigation',
     'pest control',
-    'tree felling',
-    'painting',
-    'paving',
-    'landscape maintenance',
-    'landscape services',
+    'Miracle Pest Control',
+    'Johannesburg pest control',
+    'residential pest control',
+    'commercial pest control',
+    'pest management',
+    'termite control',
+    'rodent control',
+    'insect control',
+    'exterminator services',
+    'safe pest removal',
+    'pest prevention',
+    'home pest control',
+    'office pest control',
   ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`flex flex-col debug-screens`}>
+      <body className={cn(`flex flex-col debug-screens`, poppins.className)}>
         <Header />
         <main className='flex-1'>{children}</main>
         <Footer />
