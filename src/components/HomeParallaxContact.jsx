@@ -28,7 +28,7 @@ const formSchema = z.object({
     .string()
     .max(20, { message: 'Your Name Must Be Less Than 60 characters long' })
     .min(1, { message: 'Enter Your Phone Number' }),
-  service: z.enum(['Fumigation', 'Pest Control', 'Termite Control']),
+  service: z.enum(['Fumigation Services', 'Pest Control', 'Termite Control']),
   message: z
     .string()
     .max(500, { message: 'Your Name Must Be Less Than 500 characters long' }),
@@ -136,7 +136,7 @@ export const HomeParallaxContact = () => {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className='rounded-none border-2'>
-                    <SelectItem value='fumigation'>
+                    <SelectItem value='Fumigation Services'>
                       Fumigation Services
                     </SelectItem>
                     <SelectItem value='Pest Control'>Pest Control</SelectItem>
