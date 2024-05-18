@@ -27,10 +27,10 @@ export const EmailTemplate = (formData) => (
             <b> Sender's Email: {formData.email}</b>
           </Text> */}
           <Text style={paragraph}>
-            <b>Sender's Full Name: {formData.full_name}</b>
+            <b>{`Sender's Full Name: ${formData.full_name}`}</b>
           </Text>
           <Text style={paragraph}>
-            <b>Sender's Phone Number: {formData.phone_number}</b>
+            <b>{`Sender's Phone Number: ${formData.phone_number}`}</b>
           </Text>
           <Text style={paragraph}>
             <b> Service Required: {formData.phone_number}</b>
