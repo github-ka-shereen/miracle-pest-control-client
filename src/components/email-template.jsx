@@ -21,7 +21,6 @@ export const EmailTemplate = (formData) => (
     <Body style={main}>
       <Container style={container}>
         <Section style={paragraphContent}>
-          <Hr style={hr} />
           <Text style={heading}>WEBSITE MESSAGE DETAILS</Text>
           {/* <Text style={paragraph}>
             <b> Sender's Email: {formData.email}</b>
@@ -33,7 +32,7 @@ export const EmailTemplate = (formData) => (
             <b>{`Sender's Phone Number: ${formData.phone_number}`}</b>
           </Text>
           <Text style={paragraph}>
-            <b> Service Required: {formData.phone_number}</b>
+            <b> Service Required: {formData.service}</b>
           </Text>
           <Text style={heading}>MESSAGE</Text>
           {formData.message !== '' ? (
@@ -44,6 +43,7 @@ export const EmailTemplate = (formData) => (
         </Section>
 
         <Section style={paragraphContent}>
+          <Hr style={hr} />
           <Text style={paragraph}>Brought To You By,</Text>
           <Text style={{ ...paragraph, fontSize: '20px' }}>
             The AE Websites Team

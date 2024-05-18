@@ -28,7 +28,7 @@ const formSchema = z.object({
     .string()
     .max(20, { message: 'Your Name Must Be Less Than 60 characters long' })
     .min(1, { message: 'Enter Your Phone Number' }),
-  service: z.enum(['fumigation', 'pest-control', 'termite-control']),
+  service: z.enum(['Fumigation', 'Pest Control', 'Termite Control']),
   message: z
     .string()
     .max(500, { message: 'Your Name Must Be Less Than 500 characters long' }),
@@ -139,8 +139,8 @@ export const HomeParallaxContact = () => {
                     <SelectItem value='fumigation'>
                       Fumigation Services
                     </SelectItem>
-                    <SelectItem value='pest-control'>Pest Control</SelectItem>
-                    <SelectItem value='termite-control'>
+                    <SelectItem value='Pest Control'>Pest Control</SelectItem>
+                    <SelectItem value='Termite Control'>
                       Termite Control
                     </SelectItem>
                   </SelectContent>
