@@ -5,7 +5,7 @@ const CTAButton = ({text}) => {
   return (
     <Button
       size='lg'
-      className='rounded-none border-2 bg-miraclep text-white hover:bg-miracles hover:border-miraclep'
+      className='rounded-full border-2 bg-miraclep text-white hover:bg-miracles hover:border-miraclep'
     >
      {text}
     </Button>

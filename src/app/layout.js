@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/layouts/header/Header';
 import Footer from '@/components/layouts/footer/Footer';
 import { cn } from '@/lib/utils';
+import { Toaster } from 'sonner';
 
 const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -38,6 +39,11 @@ export default function RootLayout({ children }) {
         <Header />
         <main className='flex-1'>{children}</main>
         <Footer />
+        <Toaster
+          richColors
+          closeButton
+          position='top-center'
+        />
       </body>
     </html>
   );

@@ -14,6 +14,7 @@ import {
   BiSolidTimeFive,
   BiWrench,
 } from 'react-icons/bi';
+import { sendEmail } from './api/send-email';
 
 export const metadata = {
   title: 'Termite Control - Miracle Pest Control',
@@ -40,6 +41,7 @@ export const metadata = {
 const Home = () => {
   // sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
   // const loading = false;
+
   return (
     <>
       <section className='relative'>
@@ -100,6 +102,7 @@ const Home = () => {
             />
             <div className='absolute top-3/4 left-0 w-full h-full flex justify-center'>
               <Button
+                type='submit'
                 size='lg'
                 className='rounded-none border-2 bg-miracles text-white hover:bg-miraclep hover:border-miracles'
               >
@@ -328,7 +331,14 @@ const Home = () => {
         </div>
       </section>
       <section className='mt-20'>
-        <HomeParallaxContact />
+        <div className='flex gap-2 justify-center max-h-[150vh] p-4 bg-fixed bg-parallax bg-cover'>
+          <div className='flex flex-col justify-center p-5 xl:p-10 mt-10 mb-10 xl:w-1/2 w-full bg-miracles'>
+            <p className='text-white font-bold text-4xl'>Contact Us</p>
+            <div className='mt-3 text-black w-full space-y-5 z-10'>
+              <HomeParallaxContact />
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

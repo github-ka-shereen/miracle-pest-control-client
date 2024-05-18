@@ -17,6 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { HomeParallaxContact } from '@/components/HomeParallaxContact';
 
 export const metadata = {
   title: 'Contact Us - Miracle Pest Control',
@@ -99,61 +100,7 @@ const Contact = () => {
           <div className='lg:col-span-7 mb-16'>
             <h2 className='text-miracles text-3xl font-bold'>Get in Touch</h2>
             <p className='text-gray-600 mt-2'>How may we help you?</p>
-            <div className='md:flex md:items-center mt-5 gap-5'>
-              <Input
-                type='text'
-                id='name'
-                placeholder='Full Name'
-                className='mb-5 md:mb-0 rounded-none'
-              />
-              <Input
-                type='email'
-                className='rounded-none'
-                id='email'
-                placeholder='Enter Your Email'
-              />
-            </div>
-            <Input
-              className='mt-5 rounded-none'
-              type='text'
-              id='subject'
-              placeholder='Phone Number'
-            />
-            <Input
-              className='mt-5 rounded-none'
-              type='text'
-              id='subject'
-              placeholder='Subject'
-            />
-            <div className='mt-5'>
-              <Select>
-                <SelectTrigger className='rounded-none'>
-                  <SelectValue placeholder='Select Product/ Service' />
-                </SelectTrigger>
-                <SelectContent className='rounded-none'>
-                  <SelectItem value='Fumigation'>
-                    Fumigation Services
-                  </SelectItem>
-                  <SelectItem value='Pest Control'>Pest Control</SelectItem>
-                  <SelectItem value='Termite Control'>
-                    Termite Control
-                  </SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <Textarea
-              className='mt-5 rounded-none'
-              placeholder='Type your message here...'
-            />
-
-            <button
-              className='py-2 px-6 font-normal tracking-wide 
-              border align-middle text-center bg-miracles mt-8
-               text-white inline-flex items-center gap-1'
-            >
-              Send Message
-              <BiNavigation width={16} />
-            </button>
+           <HomeParallaxContact/>
           </div>
         </div>
       </div>
