@@ -74,9 +74,9 @@
   scroll-behavior: smooth;
 }
 
-/* .grecaptcha-badge { 
+.grecaptcha-badge { 
     visibility: hidden !important;
-} */
+}
 
 @layer base {
   * {
