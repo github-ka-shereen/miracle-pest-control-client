@@ -5,7 +5,7 @@ import Footer from '@/components/layouts/footer/Footer';
 import { cn } from '@/lib/utils';
 
 const poppins = Poppins({
-  weight: ['100', '200', '300', '400', '500', '600', '800', '800', '700'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
 });
 

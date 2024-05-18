@@ -45,7 +45,7 @@ const Home = () => {
       <section className='relative'>
         <div className='h-[60vh] lg:h-[80vh]'>
           <HeroSlider />
-          <div className='absolute inset-0 text-center flex flex-col items-center justify-center'>
+          <div className='absolute inset-0 flex flex-col text-center items-center justify-center'>
             <p className='text-miracles p-2 mb-3 sm:text-lg text-xl font-semibold'>
               {`Ants, Cockroaches, Rats, Mice, Voles and Moles Don't Stand A
               Chance`}
@@ -56,7 +56,7 @@ const Home = () => {
             <h2 className='text-white md:text-3xl text-lg font-normal'>
               Fumigation And Pest Control Experts
             </h2>
-            <div className='flex items-center md:p-6 p-3 justify-center mt-8 hover:-translate-y-2 transition duration-300 rounded-lg bg-white h-16 w-42 sm:h-24 sm:w-60'>
+            {/* <div className='flex items-center md:p-6 p-3 justify-center mt-8 hover:-translate-y-2 transition duration-300 rounded-lg bg-white h-16 w-42 sm:h-24 sm:w-60'>
               <Image
                 src='/assets/images/svg/google-logo.svg'
                 width={55}
@@ -74,7 +74,7 @@ const Home = () => {
                   <BiSolidStar className='text-miracles w-5 h-5' />
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className='flex space-x-2 cursor-pointer'>
               <div className='flex items-center p-2 justify-center mt-8 hover:-translate-y-2 transition duration-300 rounded-none bg-miraclep h-14 w-14'>
                 <BiLogoWhatsapp className='w-20 h-20 text-white' />

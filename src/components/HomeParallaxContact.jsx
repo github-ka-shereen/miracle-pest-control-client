@@ -1,5 +1,4 @@
-import { Input } from './ui/input';
-import { Label } from './ui/label';
+'use client';
 import { Textarea } from './ui/textarea';
 import {
   Select,
@@ -9,77 +8,191 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Button } from './ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from './ui/form';
+import { z } from 'zod';
+import { Input } from './ui/input';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Send } from 'lucide-react';
+import { sendEmail } from '@/app/api/send';
+
+
+
+
+const formSchema = z.object({
+  full_name: z
+    .string()
+    .max(60, { message: 'Your Name Must Be Less Than 60 characters long' })
+    .min(1, { message: 'Enter Your Name' }),
+  email: z.string().email(),
+  phone_number: z
+    .string()
+    .max(20, { message: 'Your Name Must Be Less Than 60 characters long' })
+    .min(1, { message: 'Enter Your Phone Number' }),
+  service: z.enum(['fumigation', 'pest-control', 'termite-control']),
+  message: z
+    .string()
+    .max(500, { message: 'Your Name Must Be Less Than 500 characters long' }),
+});
 
 export const HomeParallaxContact = () => {
+
+
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      full_name: '',
+      email: '',
+      phone_number: '',
+      service: undefined,
+      message: '',
+    },
+  });
+
+  const handleSubmit = (formData) => {
+    console.log('Submission Successful!!', formData);
+    sendEmail(formData);
+    form.reset();
+  };
+
   return (
     <div className='flex gap-2 justify-center max-h-[150vh] p-4 bg-fixed bg-parallax bg-cover'>
       <div className='flex flex-col justify-center p-5 xl:p-10 mt-10 mb-10 xl:w-1/2 w-full bg-miracles'>
         <p className='text-white font-bold text-4xl'>Contact Us</p>
         <div className='mt-3 text-black w-full space-y-5 z-10'>
-          <div className=''>
-            <Label htmlFor='name'>Your Name (Required)</Label>
-            <Input
-              type='text'
-              id='name'
-              placeholder='Full Name'
-              className='rounded-none'
-            />
-          </div>
-          <div>
-            <Label htmlFor='email'>Your Email (Required)</Label>
-            <Input
-              type='email'
-              id='email'
-              placeholder='Full Name'
-              className='rounded-none'
-            />
-          </div>
-          <div>
-            <Label htmlFor='phone_number'>Phone Number</Label>
-            <Input
-              type='text'
-              id='phone_number'
-              placeholder='Phone Number'
-              className='rounded-none'
-            />
-          </div>
-          <div>
-            <Label htmlFor='message'>Select Product/ Service</Label>
-            <Select>
-              <SelectTrigger className='rounded-none'>
-                <SelectValue placeholder='Select Product/ Service' />
-              </SelectTrigger>
-              <SelectContent className='rounded-none'>
-                <SelectItem value='Fumigation'>Fumigation Services</SelectItem>
-                <SelectItem value='Pest Control'>Pest Control</SelectItem>
-                <SelectItem value='Termite Control'>Termite Control</SelectItem>
-                {/* <SelectItem value='Stump Removal'>Stump Removal</SelectItem>
-                <SelectItem value='Irrigation/Sprinkler System'>
-                  Irrigation/Sprinkler System
-                </SelectItem>
-                <SelectItem value='Lawn Dressing/Compost/Top Soil etc'>
-                  Lawn Dressing/Compost/Top Soil etc
-                </SelectItem> */}
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <Label htmlFor='message'>How may we help you</Label>
-            <Textarea
-              type='text'
-              id='message'
-              placeholder='Type your message here...'
-              className='rounded-none'
-            />
-          </div>
-          <div>
-            <Button
-              size='lg'
-              className='rounded-none border-2 border-miraclep bg-white text-miraclep hover:bg-miraclep hover:text-white hover:border-white'
+          <Form {...form}>
+            <form
+              className='space-y-5'
+              onSubmit={form.handleSubmit(handleSubmit)}
             >
-              Submit
-            </Button>
-          </div>
+              <div>
+                <FormField
+                  control={form.control}
+                  name='full_name'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder='Enter Your Full Name'
+                          type='text'
+                          {...field}
+                          className='rounded-none'
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div>
+                <FormField
+                  control={form.control}
+                  name='email'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          id='email'
+                          placeholder='Enter Your Email'
+                          {...field}
+                          className='rounded-none'
+                        />
+                      </FormControl>
+
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div>
+                <FormField
+                  control={form.control}
+                  name='phone_number'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder='Enter Your Phone Number'
+                          {...field}
+                          className='rounded-none'
+                        />
+                      </FormControl>
+
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div>
+                <FormField
+                  control={form.control}
+                  name='service'
+                  render={({ field }) => (
+                    <FormItem>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger className='rounded-none'>
+                            <SelectValue placeholder='Select Product/ Service' />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent className='rounded-none'>
+                          <SelectItem value='fumigation'>
+                            Fumigation Services
+                          </SelectItem>
+                          <SelectItem value='pest-control'>
+                            Pest Control
+                          </SelectItem>
+                          <SelectItem value='termite-control'>
+                            Termite Control
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div>
+                <FormField
+                  control={form.control}
+                  name='message'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Textarea
+                          type='text'
+                          placeholder='Type your message here...'
+                          className='rounded-none'
+                          {...field}
+                        />
+                      </FormControl>
+
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div className=''>
+                <Button
+                  size='lg'
+                  className='flex gap-1 transform motion-safe:hover:scale-105 duration-300 rounded-full border-2 border-miraclep bg-white text-miraclep hover:bg-miraclep hover:text-white hover:border-white'
+                >
+                  Submit
+                  <Send />
+                </Button>
+              </div>
+            </form>
+          </Form>
         </div>
       </div>
     </div>
