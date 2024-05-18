@@ -15,6 +15,7 @@ import {
   BiWrench,
 } from 'react-icons/bi';
 import { sendEmail } from './api/send-email';
+import { GoogleCaptchaWrapper } from '@/components/GoogleCaptchaWrapper';
 
 export const metadata = {
   title: 'Termite Control - Miracle Pest Control',
@@ -288,6 +289,7 @@ const Home = () => {
             src='/assets/images/bg/miracle-pest-banner-1.jpg'
             height={600}
             width={1200}
+            alt='banner image'
           />
           <div className='absolute xl:hidden text-white text-md md:text-4xl text-center md:top-[35%] top-1/4 left-[10%] mr-9'>
             Upfront Pricing, No Hidden Cost And 24/7 Service
@@ -335,7 +337,9 @@ const Home = () => {
           <div className='flex flex-col justify-center p-5 xl:p-10 mt-10 mb-10 xl:w-1/2 w-full bg-miracles'>
             <p className='text-white font-bold text-4xl'>Contact Us</p>
             <div className='mt-3 text-black w-full space-y-5 z-10'>
-              <HomeParallaxContact />
+              <GoogleCaptchaWrapper>
+                <HomeParallaxContact />
+              </GoogleCaptchaWrapper>
             </div>
           </div>
         </div>

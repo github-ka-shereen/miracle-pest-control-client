@@ -2,22 +2,14 @@ import React from 'react';
 import {
   BiMap,
   BiMessageAlt,
-  BiNavigation,
   BiPhone,
   BiTime,
 } from 'react-icons/bi';
 
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import PageBanner from '@/components/PageBanner';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+
 import { HomeParallaxContact } from '@/components/HomeParallaxContact';
+import { GoogleCaptchaWrapper } from '@/components/GoogleCaptchaWrapper';
 
 export const metadata = {
   title: 'Contact Us - Miracle Pest Control',
@@ -99,8 +91,9 @@ const Contact = () => {
 
           <div className='lg:col-span-7 mb-16'>
             <h2 className='text-miracles text-3xl font-bold'>Get in Touch</h2>
-            <p className='text-gray-600 mt-2'>How may we help you?</p>
-           <HomeParallaxContact/>
+            <GoogleCaptchaWrapper>
+              <HomeParallaxContact />
+            </GoogleCaptchaWrapper>
           </div>
         </div>
       </div>

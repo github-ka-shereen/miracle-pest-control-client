@@ -74,8 +74,8 @@
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'TT Norms';
+.grecaptcha-badge { 
+    visibility: hidden !important;
 }
 
 @layer base {

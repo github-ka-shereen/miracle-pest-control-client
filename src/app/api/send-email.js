@@ -1,5 +1,5 @@
-import { EmailTemplate } from '@/components/email-template';
-import { redirect } from 'next/navigation';
+
+import EmailTemplate from '@/components/email-template';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
@@ -14,9 +14,9 @@ export const sendEmail = async (formData) => {
   });
 
   if (error) {
-    res.status(400).json(error);
+    console.log('Error', error);
   } else {
   }
 
-  res.status(200).json(data);
+  console.log('Data', data);
 };
