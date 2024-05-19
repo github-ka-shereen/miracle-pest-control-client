@@ -35,8 +35,8 @@ const Footer = () => {
           <div className='flex gap-5 items-center lg:items-start lg:text-start text-center flex-col'>
             <p className='text-3xl font-medium'>Contact Us</p>
             <p className='font-light text-xl'>
-              +27 781 800 671<br></br>
-              info@miraclelawn.co.za
+              +27 839 991 839<br></br>
+              info@mpce.co.za
             </p>
 
             <div className='flex -mt-2 gap-2'>

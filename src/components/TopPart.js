@@ -13,7 +13,7 @@ const TopPart = () => {
         <div className='flex text-lg space-x-6'>
           <div className='flex items-center  hover:-translate-y-1 transition duration-300'>
             <BiSolidPhone className='w-6 h-6' />
-            <p>+27781800671</p>
+            <p>+27839991839</p>
           </div>
           <div className='flex items-center  gap-1 hover:-translate-y-1 transition duration-300'>
             <BiEnvelopeOpen className='w-6 h-6 ' />

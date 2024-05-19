@@ -58,7 +58,7 @@ const Contact = () => {
                   <BiPhone className='text-2xl fill-current text-miracles' />
                 </div>
                 <p className='text-gray-600 text-md xl:text-lg'>
-                  Phone: +27 781 800 671
+                  Phone: +27 839 991 839
                 </p>
               </div>
               <div className='flex items-center gap-2'>
@@ -90,7 +90,7 @@ const Contact = () => {
           </div>
 
           <div className='lg:col-span-7 mb-16'>
-            <h2 className='text-miracles text-3xl font-bold'>Get in Touch</h2>
+            <h2 className='text-miracles text-3xl mb-3 font-bold'>Get in Touch</h2>
             <GoogleCaptchaWrapper>
               <HomeParallaxContact />
             </GoogleCaptchaWrapper>
